@@ -11,4 +11,4 @@ jobs:
           SLACK_WEBHOOK: ${{ secrets.SLACK_MEDIA_HOOK }}
         uses: Ilshidur/action-slack@2.1.0
         with:
-          args: 'New commens with hacker news: ${{ on.rss.outputs.contentSnippet }}\n<https://news.ycombinator.com/item?id=24648960|Click here> for details!'
+          args: 'New commens with hacker news: ${{ on.rss.outputs.contentSnippet }}\\n<https://news.ycombinator.com/item?id=24648960|Click here> for details!'
