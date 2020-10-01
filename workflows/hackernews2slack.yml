@@ -1,0 +1,14 @@
+on:
+  rss:
+    url: https://hnrss.org/item?id=24648960
+jobs:
+  slack:
+    name: Send a message to Slack
+    runs-on: ubuntu-latest
+    steps:
+      - name: Slack notification
+        env:
+          SLACK_WEBHOOK: ${{ secrets.SLACK_MEDIA_WEBHOOK }}
+        uses: Ilshidur/action-slack@2.1.0
+        with:
+          args: 'new commens with hacker news: ${{ on.rss.outputs.contentSnippet }}\n<hhttps://news.ycombinator.com/item?id=24648960|Click here> for details!'
