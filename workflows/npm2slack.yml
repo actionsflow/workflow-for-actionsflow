@@ -14,4 +14,4 @@ jobs:
           args: |
             New version (${{ on.npm.outputs.version }}) with actionsflow npm package
             
-            <https://www.npmjs.com/package/actionsflow|Click here> for details
+            <https://github.com/actionsflow/actionsflow/blob/main/packages/actionsflow/CHANGELOG.md|Click here> for details
